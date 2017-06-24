@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shimk.trial">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconjpg"
+        android:label="QuickPlanner"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:label="Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreateEvent"
+            android:label="Create Event"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:parentActivityName=".CreateEvent"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.shimk.trial.CreateEvent" />
+        </activity>
+        <activity android:name=".JoinEvent"
+            android:label="Join Event"/>
+        <activity android:name=".EventViewer"
+            android:label="Event Viewer"/>
+        <activity
+            android:name=".EditEvent"
+            android:label="@string/title_activity_edit_event"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EventEdit"></activity>
+    </application>
+
+</manifest>
